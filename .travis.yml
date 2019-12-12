@@ -8,8 +8,8 @@ install:
 
 script: python manage.py test
 
-addons:
-  postgresql: "9.4"
+services:
+  - postgresql
 
 before_install:
   - psql -c "CREATE DATABASE testing_db;" -U postgres
